@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> <kml xmlns="http://earth.google.com/kml/2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <Document> <name>BT WiFi</name><Folder> 
+<Placemark><magnitude>1</magnitude> <Point> <coordinates>0.16125, 52.2015, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>2</magnitude> <Point> <coordinates>0.13, 52.224, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>7</magnitude> <Point> <coordinates>0.11875, 52.19025, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>49</magnitude> <Point> <coordinates>0.11875, 52.1685, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>3</magnitude> <Point> <coordinates>0.1725, 52.21425, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>4</magnitude> <Point> <coordinates>0.17125, 52.215, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>6</magnitude> <Point> <coordinates>0.17125, 52.21425, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>3</magnitude> <Point> <coordinates>0.17125, 52.21575, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>2</magnitude> <Point> <coordinates>0.1375, 52.19625, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>10</magnitude> <Point> <coordinates>0.13625, 52.19625, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>7</magnitude> <Point> <coordinates>0.13625, 52.1955, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>5</magnitude> <Point> <coordinates>0.14375, 52.18575, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>10</magnitude> <Point> <coordinates>0.14375, 52.1865, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>7</magnitude> <Point> <coordinates>0.11625, 52.167, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>2</magnitude> <Point> <coordinates>0.12625, 52.23, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>1</magnitude> <Point> <coordinates>0.125, 52.23, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>1</magnitude> <Point> <coordinates>0.09625, 52.2015, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>5</magnitude> <Point> <coordinates>0.095, 52.20075, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>9</magnitude> <Point> <coordinates>0.14625, 52.19775, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>1</magnitude> <Point> <coordinates>0.1475, 52.1985, 0</coordinates> </Point> </Placemark>
+<Placemark><magnitude>1</magnitude> <Point> <coordinates>0.1475, 52.19775, 0</coordinates> </Point> </Placemark>
+</Folder>  </Document> </kml>

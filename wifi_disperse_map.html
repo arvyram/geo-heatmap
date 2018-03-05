@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wi-Stitch -- Density of BT WiFi APs</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
+    <style>
+    .ol-scale-line-inner {border:1px solid #000;border-top:none;color:#000;font-size:15px;text-align:center;margin:1px;will-change:contents,width}
+    </style>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <form>
+      <label>radius size</label>
+      <input id="radius" type="range" min="1" max="50" step="1" value="5"/>
+      <label>blur size</label>
+      <input id="blur" type="range" min="1" max="50" step="1" value="5"/>
+    </form>
+    <script>
+      var blur = document.getElementById('blur');
+      var radius = document.getElementById('radius');
+
+      var vector = new ol.layer.Heatmap({
+        source: new ol.source.Vector({
+          url: './heatmap.kml',
+          format: new ol.format.KML({
+            extractStyles: false
+          })
+        }),
+        blur: parseInt(blur.value, 10),
+        radius: parseInt(radius.value, 10)
+      });
+
+      vector.getSource().on('addfeature', function(event) {
+        event.feature.set('weight', parseFloat(event.feature.get('magnitude')));
+      }); 
+
+      var BTAPs = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    url: './border/Cambridge.kml',
+                    format: new ol.format.KML()
+                }),
+                extractStyles: true,
+                extractAttributes: true,
+                maxDepth: 2,
+                setVisibility: true
+            });
+
+      var raster = new ol.layer.Tile({
+        source: new ol.source.OSM()
+      });
+      // console.log(vector2);
+      var scaleLineControl = new ol.control.ScaleLine();
+      scaleLineControl.setUnits('metric');
+
+      var map = new ol.Map({
+
+        layers: [raster, vector, BTAPs],
+        target: 'map',
+        view: new ol.View({
+          center: [14193.246790158479, 5733755.276187301],
+          zoom: 5
+        }),
+        controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }).extend([
+          scaleLineControl
+        ]),
+      });
+
+
+      blur.addEventListener('input', function() {
+        vector.setBlur(parseInt(blur.value, 10));
+      });
+
+      radius.addEventListener('input', function() {
+        vector.setRadius(parseInt(radius.value, 10));
+      });
+    </script>
+  </body>
+</html>
